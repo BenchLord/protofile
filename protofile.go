@@ -1,3 +1,4 @@
+// Package protofile generates structured data to represent the contents of a .proto file.package protofile
 package protofile
 
 import (
@@ -10,8 +11,7 @@ import (
 
 // ProtoFile contains structured data read from a .proto file
 type ProtoFile struct {
-	syntax string
-	// TODO make this a map
+	syntax   string
 	services []Service
 	messages map[string]Message
 }
@@ -100,7 +100,7 @@ func (m *Message) GetField(name string) (Field, error) {
 	return Field{}, fmt.Errorf("%s does not contain field %s", m.name, name)
 }
 
-// Field represents an a field within a message
+// Field represents a field within a message
 type Field struct {
 	name      string
 	fieldType string
