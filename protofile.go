@@ -1,4 +1,4 @@
-// Package protofile generates structured data to represent the contents of a .proto file.package protofile
+// Package protofile generates structured data to represent the contents of a .proto file.
 package protofile
 
 import (
