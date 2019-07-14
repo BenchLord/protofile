@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service Test {
+  rpc getAll(Empty) returns (stream Thing);
+  rpc getOne(Id) returns (Thing);
+}
+
+message Empty {};
+message Thing {
+  Id id = 1;
+  string name = 2;
+  repeated string awards = 3;
+}
+message Id {
+  int64 value = 1;
+}
